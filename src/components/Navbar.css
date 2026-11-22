@@ -1,0 +1,198 @@
+.navbar {
+  width: 100%;
+
+  background: rgba(17, 24, 39, 0.96);
+
+  border-bottom: 1px solid #1e293b;
+
+  padding: 18px 0;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  color: #facc15;
+
+  text-decoration: none;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.45);
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  padding: 8px 2px;
+
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+/* Hover */
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   ACTIVE PAGE
+========================= */
+
+.nav-links a.active {
+  color: #facc15;
+
+  font-weight: 600;
+
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.25);
+}
+
+/* Underline */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -5px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #facc15;
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+/* Active underline */
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Hover underline */
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar-container {
+    width: 92%;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .navbar-container {
+    width: 94%;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+
+    padding: 7px 1px;
+  }
+
+  .nav-links a::after {
+    bottom: -4px;
+  }
+
+}

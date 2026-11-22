@@ -1,0 +1,500 @@
+.movies-page {
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+}
+
+/* =========================
+   MOVIES HEADER
+========================= */
+
+.movies-header {
+  padding: 70px 8% 45px;
+
+  text-align: center;
+}
+
+.movies-small-text {
+  color: #facc15;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 15px;
+}
+
+.movies-header h1 {
+  color: #ffffff;
+
+  font-size: 50px;
+
+  line-height: 1.2;
+
+  margin-bottom: 15px;
+}
+
+.movies-header h1 span {
+  color: #facc15;
+}
+
+.movies-description {
+  color: #94a3b8;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   SEARCH FORM
+========================= */
+
+.search-form {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  display: flex;
+
+  gap: 12px;
+}
+
+.search-form input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 15px 18px;
+
+  border: 1px solid #475569;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #1e293b;
+
+  color: white;
+
+  font-size: 16px;
+
+  transition: border-color 0.3s ease;
+}
+
+.search-form input::placeholder {
+  color: #94a3b8;
+}
+
+.search-form input:focus {
+  border-color: #facc15;
+}
+
+.search-form button {
+  padding: 15px 26px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #facc15;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.search-form button:hover {
+  opacity: 0.85;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   MOVIES RESULTS
+========================= */
+
+.movies-results {
+  padding: 20px 8% 70px;
+}
+
+/* =========================
+   RESULTS TOP
+========================= */
+
+.results-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.results-top h2 {
+  color: #ffffff;
+
+  font-size: 28px;
+}
+
+.results-top p {
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+/* =========================
+   MOVIE GRID
+========================= */
+
+.movie-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.movies-status {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.movies-status h2 {
+  color: #ffffff;
+
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+.movies-status p {
+  color: #94a3b8;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error-message {
+  color: #ef4444 !important;
+
+  font-size: 16px !important;
+
+  font-weight: 600;
+}
+
+/* =========================
+   LOADING SPINNER
+========================= */
+
+.loading-spinner {
+  width: 38px;
+
+  height: 38px;
+
+  border: 4px solid #334155;
+
+  border-top-color: #facc15;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 50px;
+}
+
+.pagination button {
+  min-width: 120px;
+
+  padding: 11px 18px;
+
+  border: 1px solid #475569;
+
+  border-radius: 7px;
+
+  background: #1e293b;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #facc15;
+
+  color: #111827;
+
+  border-color: #facc15;
+}
+
+.pagination button:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+.page-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+.page-info strong {
+  color: #facc15;
+
+  font-size: 17px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .movies-header {
+    padding: 60px 6% 40px;
+  }
+
+  .movies-header h1 {
+    font-size: 44px;
+  }
+
+  .movies-results {
+    padding: 20px 6% 60px;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+}
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .movies-header {
+    padding: 50px 6% 35px;
+  }
+
+  .movies-header h1 {
+    font-size: 38px;
+  }
+
+  .movies-description {
+    font-size: 15px;
+  }
+
+  .search-form input {
+    padding: 13px 15px;
+
+    font-size: 14px;
+  }
+
+  .search-form button {
+    padding: 13px 20px;
+
+    font-size: 14px;
+  }
+
+  .movies-results {
+    padding: 20px 6% 50px;
+  }
+
+  .results-top h2 {
+    font-size: 25px;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .movies-header {
+    padding: 40px 6% 30px;
+  }
+
+  .movies-small-text {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .movies-header h1 {
+    font-size: 31px;
+  }
+
+  .movies-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .search-form {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .search-form input {
+    width: 100%;
+
+    padding: 14px;
+  }
+
+  .search-form button {
+    width: 100%;
+
+    padding: 14px;
+  }
+
+  .movies-results {
+    padding: 15px 6% 45px;
+  }
+
+  .results-top {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .results-top h2 {
+    font-size: 21px;
+  }
+
+  .results-top p {
+    font-size: 12px;
+
+    text-align: right;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+  }
+
+  .movies-status {
+    min-height: 220px;
+  }
+
+  .movies-status h2 {
+    font-size: 22px;
+  }
+
+  .movies-status p {
+    font-size: 14px;
+  }
+
+  .pagination {
+    gap: 10px;
+
+    margin-top: 35px;
+  }
+
+  .pagination button {
+    min-width: auto;
+
+    padding: 10px 12px;
+
+    font-size: 12px;
+  }
+
+  .page-info {
+    gap: 4px;
+
+    font-size: 12px;
+  }
+
+  .page-info strong {
+    font-size: 15px;
+  }
+
+}

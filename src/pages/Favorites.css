@@ -1,0 +1,470 @@
+.favorites-page {
+  min-height: 100vh;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.favorites-header {
+  padding: 65px 8% 35px;
+
+  text-align: center;
+}
+
+.favorites-small-text {
+  color: #facc15;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 14px;
+}
+
+.favorites-header h1 {
+  color: #ffffff;
+
+  font-size: 46px;
+
+  line-height: 1.2;
+
+  margin-bottom: 15px;
+}
+
+.favorites-header h1 span {
+  color: #facc15;
+}
+
+.favorites-description {
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   FAVORITES COUNT
+========================= */
+
+.favorites-count {
+  width: fit-content;
+
+  margin: 20px auto 0;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  color: #facc15;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.favorites-content {
+  padding: 25px 8% 70px;
+}
+
+/* =========================
+   TOP
+========================= */
+
+.favorites-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.favorites-top h2 {
+  color: #ffffff;
+
+  font-size: 28px;
+
+  margin-bottom: 5px;
+}
+
+.favorites-top p {
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+.browse-link {
+  color: #facc15;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.browse-link:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   MOVIE GRID
+========================= */
+
+.movie-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.favorite-movie-wrapper {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+
+.remove-favorite-btn {
+  margin-top: 10px;
+
+  width: 100%;
+
+  padding: 9px 10px;
+
+  border: 1px solid #475569;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #cbd5e1;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.remove-favorite-btn:hover {
+  background: #ef4444;
+
+  border-color: #ef4444;
+
+  color: white;
+}
+
+/* =========================
+   EMPTY FAVORITES
+========================= */
+
+.empty-favorites {
+  min-height: 430px;
+
+  max-width: 600px;
+
+  margin: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
+}
+
+.empty-heart {
+  width: 70px;
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  color: #facc15;
+
+  font-size: 40px;
+}
+
+.empty-favorites h2 {
+  color: #ffffff;
+
+  font-size: 28px;
+
+  margin-bottom: 12px;
+}
+
+.empty-favorites p {
+  max-width: 480px;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  margin-bottom: 25px;
+}
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border-radius: 7px;
+
+  background: #facc15;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .favorites-header {
+    padding: 55px 6% 30px;
+  }
+
+  .favorites-header h1 {
+    font-size: 42px;
+  }
+
+  .favorites-content {
+    padding: 25px 6% 60px;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+}
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .favorites-header {
+    padding: 45px 6% 25px;
+  }
+
+  .favorites-header h1 {
+    font-size: 36px;
+  }
+
+  .favorites-description {
+    font-size: 15px;
+  }
+
+  .favorites-content {
+    padding: 20px 6% 50px;
+  }
+
+  .favorites-top h2 {
+    font-size: 25px;
+  }
+
+  .favorites-top p {
+    font-size: 13px;
+  }
+
+  .browse-link {
+    font-size: 13px;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .favorites-header {
+    padding: 40px 6% 25px;
+  }
+
+  .favorites-small-text {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .favorites-header h1 {
+    font-size: 31px;
+  }
+
+  .favorites-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .favorites-count {
+    font-size: 12px;
+
+    padding: 6px 12px;
+  }
+
+  .favorites-content {
+    padding: 15px 6% 45px;
+  }
+
+  .favorites-top {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .favorites-top h2 {
+    font-size: 21px;
+  }
+
+  .favorites-top p {
+    font-size: 12px;
+  }
+
+  .browse-link {
+    font-size: 12px;
+
+    white-space: nowrap;
+  }
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+  }
+
+  .remove-favorite-btn {
+    padding: 8px 5px;
+
+    font-size: 11px;
+  }
+
+  .empty-favorites {
+    min-height: 380px;
+
+    padding: 30px 15px;
+  }
+
+  .empty-heart {
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 34px;
+  }
+
+  .empty-favorites h2 {
+    font-size: 23px;
+  }
+
+  .empty-favorites p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .explore-btn {
+    width: 100%;
+
+    max-width: 240px;
+
+    padding: 11px 18px;
+
+    font-size: 13px;
+  }
+
+}
